@@ -1,7 +1,7 @@
 #!/bin/sh
 #Guessing game: Guess number of files in current directory 
 
-for i in * #For loop to specify requirements of assignment, would have otherwise used "ls -f | wc -l" | egrep -o [0-9]+"
+for i in * #For loop to count number of files in current directory.
 do 
 	if [ -f "$i" ] #Identify all non-hidden files, future versions could ask user to specify hidden or non-hidden
     then
@@ -9,7 +9,7 @@ do
     fi
 done
 
-check_guess () {
+check_guess () { #Function consisting of a string of if statements which checks the guess of the user.
 	if [[ $guess -lt $count ]]
 	then 
 		echo "you entered $guess, that is less than the number of files in the current directory."
@@ -21,7 +21,7 @@ check_guess () {
 		echo "Please try again."
 		ask_function
 	else
-		echo "Contratulations, you guessed correctly!  There are $guess files in the current directory. Thanks for playing!"
+		echo "Congratulations, you guessed correctly!  There are $guess files in the current directory. Thanks for playing!"
 	fi
 }
 
@@ -29,14 +29,14 @@ ask_function () {
 	echo "How many files are there in the current directory?"
 	read guess
 
-	until [[ $guess =~ ^[1-9][0-9]*$ ]] || [[ $guess =~ ^[0]$ ]]
+	until [[ $guess =~ ^[1-9][0-9]*$ ]] || [[ $guess =~ ^[0]$ ]] #Limits user input to numbers only.
 		do
 		echo "Oops! I am only programmed to accept numerical entries, please try again!"
 		read guess
 	done
 	
 	echo "You guessed $guess files.  Let me think about this...."
-	check_guess
+	check_guess 
 }
 
 ask_function

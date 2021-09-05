@@ -1,0 +1,51 @@
+# Git Basics
+
+git --version #identify git version in use
+
+git config --global user.name "myUserName" 
+git config --global user.email myName@email.com
+
+git init #run in directory to create a repository
+git status #checks status of the repository
+
+git add <filename> #Adds specified as a tracked (staged) item within the repository
+git rm --cached <filename> #Untrack item from within the repository
+git add -A #track all changes to all files within a directory
+
+git commit -m <"comment"> #commits changes with comment to repository
+
+git reset --soft HEAD~ & git status #undo most recent commit
+
+git log #print list of git commits
+
+dit diff <filename> #show differences between unstaged changes to file compared to last commit.
+
+git checkout <filename> #undo all changes made to file and restore contents to what it was at the last commit.
+
+echo <"some_argument"> > .gitignore #list of files not tracked by git.
+
+git branch #lists all available branches 
+
+git branch <new_branch_name> #adds new branch
+git branch -d <existing_branch_name> #delete branch by name
+
+git checkout -b <new_branch_name> #Create and swtich to a new branch
+git checkout <existing_branch_name> #Change current branch to specified branch name
+
+git merge <some_other_branch> #Merge changes in another branch to currently switched to branch.
+
+git remote #specifiy remote repositories our local repository is connected to 
+
+git remote add origin https://github.com/<username>/<repo>.git #Adds new remote repository
+
+git push -u origin <branch> #Updates remote repository with all local commits. (-u flag sets origin as the default)
+
+# Pull reguests require an initial guided "New Pull Request" from the git hub webpage.
+
+# Forking
+
+git clone <http:/github.com/[username]/[repo].git #Do in main git directory to create new repository directory for forked repository
+
+git remote -v #keeps track of remote repository associated with local repository
+
+

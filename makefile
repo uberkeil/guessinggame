@@ -4,11 +4,11 @@
 # The date and time at which make was run.
 # The number of lines of code contained in guessinggame.sh.
 
-readme_test.txt: 
-	echo "##Project Title: Guessing Game (guessinggame.sh)" > readme_test.txt
-	echo "" >> readme_test.txt
-	echo "This file, README.md, was created at: " >> readme_test.txt
-	date >> readme_test.txt
-	echo "" >> readme_test.txt
-	echo "This directory contains the following number of files:" >> readme_test.txt
-	ls -l | wc -l | egrep -o [0-9]+ >> readme_test.txt
+README.md: 
+	echo "##Project Title: Guessing Game (guessinggame.sh)" > README.md
+	echo "" >> README.md
+	echo "This file, README.md, was created at: " >> README.md
+	date >> README.md
+	echo "" >> README.md
+	echo "This directory contains the following number of files:" >> README.md
+	cat guessinggame.sh | wc -l | egrep -o [0-9]+ >> README.md

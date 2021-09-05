@@ -1,7 +1,7 @@
-##Project Title: Guessing Game (guessinggame.sh)
+## Project Title: Guessing Game (guessinggame.sh)
 
 This file, README.md, was created at: 
-Sun 05 Sep 2021 17:28:57 NZST
+Sun 05 Sep 2021 17:36:50 NZST
 
-This directory contains the following number of files:
+The number of lines of code contained in *guessinggame.sh* are:
 43
